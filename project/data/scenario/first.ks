@@ -18,7 +18,7 @@
 [hidemenubutton]
 
 デバッグ用;
-@jump storage="map.ks"
+@jump storage="/simulator/map.ks"
 
 ;タイトル画面へ移動
 @jump storage="title.ks"
