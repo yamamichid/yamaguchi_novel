@@ -52,7 +52,7 @@
 
 負けてしまった......。[r]
 [p][cm]
-@jump storage=spots/kintaikyo/end.ks target=*stage1
+@jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
 
 
 *tool1
