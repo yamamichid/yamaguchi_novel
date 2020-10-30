@@ -1,29 +1,26 @@
-;チュートリアル用スクリプトファイル
+;一番最初に呼び出されるファイル
 
-*start
+[title name="ティラノスクリプト解説"]
+[stop_keyconfig]
 
-[wait time=200]
-[position height=160 top=530]
+;ティラノスクリプトが標準で用意している便利なライブラリ群
+;コンフィグ、CG、回想モードを使う場合は必須
+@call storage="tyrano.ks"
 
-;[bg storage=Yamaguchi_Xavier_Memorial_Church.jpg time=3000]
+;ゲームで必ず必要な初期化処理はこのファイルに記述するのがオススメ
 
-;[chara_new name="xavier" storage="chara/xavier/xavier.png" jname="ザビエル"]
-;[chara_show name="xavier"]
-;さて，記念キーホルダーを購入してくれるかな？
+;メッセージボックスは非表示
+@layopt layer="message" visible=false
 
-;*btn
-;[glink target=site x=10 y=580 size=20 text=購入する]
-;[glink target=finish x=200 y=580 size=20 text=購入しない]
-;[s]
+;最初は右下のメニューボタンを非表示にする
+[hidemenubutton]
 
-;[r]
-;[link storage=yamaguchi_map.ks target=*top]山口県MAP[endlink][r]
-;[s]
+デバッグ用;
+@jump storage="/simulator/map.ks"
 
-@jump storage=yamaguchi_map.ks target=*top
+;タイトル画面へ移動
+@jump storage="title.ks"
 
-*site
-[web url="http://www.xavier.jp/"]
-*finish
-アーメン...
+[s]
+
 
