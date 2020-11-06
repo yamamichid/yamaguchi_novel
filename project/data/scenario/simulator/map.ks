@@ -1,8 +1,8 @@
 *start
 
 [wait time=200]
-[bg storage="simulator/slide_yamaguchi_magic_4.png"  time=30 wait method="fadeIn"]
-[s]
+[bg storage="simulator/title.jpg"  time=30 wait method="fadeIn"]
+[l]
 
 [wait time=200]
 [position layer=message0 left="16" top="504" width="1248" height="200" frame="none" marginl="1" margint="1" marginr="1" marginb="1" ]
