@@ -52,7 +52,7 @@
 現在は実家で暮らし、時々日雇いのバイトに行っている。[l][r][cm]
 [wait time=500]
 @layopt layer=message0 visible=false
-@jump storage=simulator/map.ks target=*start
+@jump storage=simulator/map.ks target=*map
 
 *select_5yen
 [cm]
@@ -74,16 +74,16 @@
 ふとあの時の5円のおかげだったのではないかと考えることがある、、、[l]俺らしくないか（苦笑）[l]
 [wait time=500]
 @layopt layer=message0 visible=false
-@jump storage=simulator/map.ks target=*start
+@jump storage=simulator/map.ks target=*map
 
 
 *select_somewhere
 まだ未実装です。[l]
 @layopt layer=message0 visible=false
-@jump storage=simulator/map.ks target=*start
+@jump storage=simulator/map.ks target=*map
 
 ; 彫刻のストーリー
 *select_sculpture
 まだ未実装です。[l]
 @layopt layer=message0 visible=false
-@jump storage=simulator/map.ks target=*start
+@jump storage=simulator/map.ks target=*map
