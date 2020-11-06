@@ -4,6 +4,8 @@
 [bg storage="simulator/title.jpg"  time=30 wait method="fadeIn"]
 [l]
 
+*map
+
 [wait time=200]
 [position layer=message0 left="16" top="504" width="1248" height="200" frame="none" marginl="1" margint="1" marginr="1" marginb="1" ]
 [bg storage="simulator/map-white.png"  time=30 wait method="fadeIn"]
