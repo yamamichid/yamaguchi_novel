@@ -1,7 +1,7 @@
 *start
 
 [wait time=200]
-[bg storage=tokiwakoenn/enter.jpg]
+[bg storage=spots/tokiwakoenn/enter.jpg]
 @layopt layer=message0 visible=true
 ;テキスト範囲の設定
 [position height=200 width=1240]
@@ -33,8 +33,8 @@
 
 ; 神社のストーリー
 *select_shrine
-[bg storage=tokiwakoenn/shrine.jpg time=500][l]
-[bg storage=tokiwakoenn/shrine2.jpg time=500]
+[bg storage=spots/tokiwakoenn/shrine.jpg time=500][l]
+[bg storage=spots/tokiwakoenn/shrine2.jpg time=500]
 [cm]
 お賽銭はいくらにしようか？[l][r][cm]
 [link target=*select_0yen] 0円[r]
@@ -46,7 +46,7 @@
 [cm]
 「神様なんているわけないよな、やめておこう」[l][r][cm]
 ．．．[l][r][cm]
-[bg storage=tokiwakoenn/black.png time=300]
+[bg storage=spots/tokiwakoenn/black.png time=300]
 誰も頼ることができないと思った俺は、多大なストレスを抱え大学院を中退した、鬱病だった。[l][r]
 その後も病気に悩まされ、社会人として働くことは難しくなってしまった。[l][r][cm]
 現在は実家で暮らし、時々日雇いのバイトに行っている。[l][r][cm]
@@ -65,7 +65,7 @@
 [s]
 
 *select_go_home
-[bg storage=tokiwakoenn/black.png time=500]
+[bg storage=spots/tokiwakoenn/black.png time=500]
 あの後、少し気持ちが楽になった気がした。[l][r][cm]
 研究の成果は決して良くなかったが必死に喰らいつき、何とか大学院を修了できた。[l][r]
 就活は参加したイベントでベンチャー企業から声を掛けてもらい、現在もそこで働いている。[l][r][cm]
