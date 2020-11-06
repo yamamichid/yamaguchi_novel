@@ -17,7 +17,7 @@
 [edit name="f.hero_name" left=505 top=520 width="140" height="26" size="20" maxchars="8" initial="ふく太郎"]
 
 [locate x=450 y=560 ]
-[button graphic="button/send.png" target=*commit height=30 width=80]
+[button graphic="spots/kaikyokann/button/send.png" target=*commit height=30 width=80]
 [s]
 
 *commit
