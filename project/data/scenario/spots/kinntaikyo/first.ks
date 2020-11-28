@@ -2,7 +2,7 @@
 [cm]
 
 ;背景画像の変更
-[bg storage=kinntaikyo/A_01_kintaikyo_07_01.jpg time=3000]
+[bg storage=spots/kinntaikyo/A_01_kintaikyo_07_01.jpg time=3000]
 
 ; メッセージ表示場所を設定
 @layopt layer=message0 visible=true
@@ -25,7 +25,7 @@
 錦帯橋の方からだ。[r]
 [p][cm]
 
-[image layer="base" page="fore" storage=kinntaikyo/A_01_kintaikyo_11_01.jpg time=3000]
+[image layer="base" page="fore" storage=spots/kinntaikyo/A_01_kintaikyo_11_01.jpg time=3000]
 
 「！！！」[r]
 [p][cm]
