@@ -12,4 +12,4 @@
 @layopt layer=message0 visible=false
 
 [cm]
-@jump storage=simulator/map.ks target=*start
+@jump storage=simulator/map.ks target=*map
