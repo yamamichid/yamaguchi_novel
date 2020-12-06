@@ -1,5 +1,12 @@
 *start
 
+[title name="常盤公園"]
+[stop_keyconfig]
+@call storage="tyrano.ks"
+@layopt layer="message" visible=false
+[hidemenubutton]
+
+
 [wait time=200]
 [bg storage=spots/tokiwakoenn/enter.jpg]
 @layopt layer=message0 visible=true
