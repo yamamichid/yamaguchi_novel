@@ -1,6 +1,6 @@
 ;一番最初に呼び出されるファイル
 
-[title name="ティラノスクリプト解説"]
+[title name="旅しちょる?"]
 [stop_keyconfig]
 
 ;ティラノスクリプトが標準で用意している便利なライブラリ群
@@ -15,7 +15,7 @@
 ;最初は右下のメニューボタンを非表示にする
 [hidemenubutton]
 
-デバッグ用;
+;デバッグ用
 @jump storage="/simulator/map.ks"
 
 ;タイトル画面へ移動
