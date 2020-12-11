@@ -113,9 +113,9 @@ window.onload = function() { setTimeout(doScroll, 100); }
 
 
 <!--  First シナリオファイルに外部ファイルを利用したい場合は、こちらにシナリオファイルのURLを指定できます-->
-<!--
+
 <input type="hidden" id="first_scenario_file" value="http://test.com/tyrano/data/scenario/first.ks">
--->
+
 
 <!-- コンフィグ調整をindex.htmlでもできる -->
 <!--
@@ -139,4 +139,16 @@ window.onload = function() { setTimeout(doScroll, 100); }
 
 
 </body>
+  <script>
+    var getParameterByName = function(name) {
+      var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+    var element = document.getElementById("first_scenario_file");
+    if(getParameterByName("spot")){
+     element.val(`spots/${getParameterByName("spot")}/first.ks`)
+    }else{
+      element.val(`simulater/first.ks`)
+    }
+  </script>
 </html>
