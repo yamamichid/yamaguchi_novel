@@ -5,6 +5,9 @@
 ### 遊び方
 
 [ゲームスタート](https://etmula.github.io/yamaguchi_novel/project)
++ [海響館](https://etmula.github.io/yamaguchi_novel/project?spot=kaikyokann)
++ [錦帯橋](https://etmula.github.io/yamaguchi_novel/project?spot=kinntaikyo)
++ [常盤公園](https://etmula.github.io/yamaguchi_novel/project?spot=tokiwakoenn)
 
 ### 制作者
 
