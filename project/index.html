@@ -120,7 +120,6 @@ window.onload = function() { setTimeout(doScroll, 100); }
     var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
   }
-  console.log(getParameterByName("spot"))
   var element = document.getElementById("first_scenario_file");
   if(getParameterByName("spot")){
     $('#first_scenario_file').val(`spots/${getParameterByName("spot")}/first.ks`)
