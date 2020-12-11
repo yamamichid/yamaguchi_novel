@@ -1,5 +1,12 @@
 *start
 
+@call storage="tyrano.ks"
+;ゲームで必ず必要な初期化処理はこのファイルに記述するのがオススメ
+;メッセージボックスは非表示
+@layopt layer="message" visible=false
+;最初は右下のメニューボタンを非表示にする
+[hidemenubutton]
+
 [wait time=200]
 [position layer=message0 left="16" top="504" width="1248" height="200" frame="none" marginl="1" margint="1" marginr="1" marginb="1" ]
 [image layer="base" page="fore" storage="simulator/title_back.jpg" ]
