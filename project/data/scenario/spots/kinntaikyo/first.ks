@@ -14,8 +14,6 @@
 
 ; メッセージ表示場所を設定
 @layopt layer=message0 visible=true
-[position layer=message0 width=800 height=200 top=400 left=70]
-[position layer=message0 page=fore frame="wafuu_frame.png" margint="30" marginl="20" marginr="20" marginb="10"]
 
 目が覚めると、[r]
 そこは、錦川だった。[r]
@@ -38,6 +36,8 @@
 「！！！」[r]
 [p][cm]
 
+[chara_new name="iwagoron" storage="spots/kinntaikyo/iwagoron_1.png" jname="イワゴロン"]
+[chara_show name="iwagoron"]
 イワゴロンが現れた！
 [p][cm]
 
@@ -59,6 +59,7 @@
 [p][cm]
 
 負けてしまった......。[r]
+[chara_hide name=iwagoron]
 [p][cm]
 @jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
 
@@ -99,6 +100,7 @@ f.enemy1_eat = "岩国レンコンチップス"
 [p][cm]
 「こんなおいしいものを作る場所を荒らしてごめんなさい！」[r]
 イワゴロンは反省して帰っていった。[r]
+[chara_hide name=iwagoron]
 [p][cm]
 @jump target=*story2
 
@@ -112,6 +114,7 @@ f.enemy1_eat = "岩国レンコンチップス"
 [cm]
 イワゴロンに999のダメージ！[r][p]
 イワゴロンをたおした！[r]
+[chara_hide name=iwagoron]
 @jump target=*story2
 
 *tool1_2
@@ -124,18 +127,44 @@ f.enemy1_eat = "岩国レンコンチップス"
 *story2
 [p][cm]
 
-おじいさん[r]
-「助けていただき，ありがとうございます！」[r]
-[p][cm]
 
-「御礼にこれをどうぞ！」[r]
-[p][cm]
-
-「岩国ずし」を手に入れた！[r]
+俺[r]
+な、何が起きているんだ？[r]
 [p][cm]
 
 おじいさん[r]
-「実は，岩国城に良からぬものが住みついて[r]
+「助けていただき、ありがとうございます！」[r]
+[p][cm]
+
+おじいさん[r]
+「御礼にこれを！」[r]
+[p][cm]
+
+「〇〇〇味のソフトクリーム」を手に入れた！[r]
+[p][cm]
+
+俺[r]
+これは？[r]
+[p][cm]
+
+おじいさん[r]
+そこ(錦帯橋の近く)にあるソフトクリーム屋の[r]
+ソフトクリームじゃよ。[r]
+[p][cm]
+
+おじいさん[r]
+種類が100種類を超えているからの。[r]
+おぬしも後で通うとよい。[r]
+[p][cm]
+
+俺[r]
+へぇ～。ありがとうございます。[r]
+(なんでそんなに種類あんだ？[r]
+あと，何味か教えて！)[r]
+[p][cm]
+
+おじいさん[r]
+「実は、岩国城に良からぬものが住みついて[r]
 おるらしいのじゃ」[r]
 [p][cm]
 
@@ -145,9 +174,31 @@ f.enemy1_eat = "岩国レンコンチップス"
 [p][cm]
 
 *story2_2
-「ありがとうございます！[r]
-健闘を祈っておるぞ」
+「おぉ！これはありがたい！[r]
+健闘を祈っておるぞ！」
+[p][cm]
+
+俺[r]
+．．．．．．．．．。[p][r]
+(強引では！？)[r]
+[p][cm]
+
+俺は錦帯橋を渡り，岩国城へ向かった。[r][p]
+その際、通行料として、310円を支払った.
 [p][cm]
 
 
+岩国城へはロープウェイを使って[r]
+行くことが出来る。
+[p][cm]
+
+！！！
+[p][cm]
+
+*stage2_1
+[chara_new name="cormorantdevil" storage="spots/kinntaikyo/cormorantdevil_1.png" jname="コモラントデビル"]
+[chara_show name="cormorantdevil"]
+コモラントデビルが現れた！[r]
+[p][cm]
+[chara_hide name=cormorantdevil]
 @jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
