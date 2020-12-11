@@ -6,7 +6,7 @@
 
 ; メッセージ表示場所を設定
 @layopt layer=message0 visible=true
-[position layer=message0 width=800 height=200 top=400 left=70]
+
 目が覚めると、[r]
 そこは、錦川だった。[r]
 [p][cm]
@@ -192,5 +192,5 @@ f.enemy1_eat = "岩国レンコンチップス"
 [chara_show name="cormorantdevil"]
 コモラントデビルが現れた！[r]
 [p][cm]
-[chara_hide name=iwagoron]
+[chara_hide name=cormorantdevil]
 @jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
