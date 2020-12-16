@@ -21,14 +21,15 @@
 [bg storage="simulator/map-white.png"  time=300 wait method="fadeIn"]
 
 
-
-[glink text="常盤公園" size=20 color="btn_22_green"  x="393" y="469" storage="spots/tokiwakoenn/first.ks" target="*start"]
+[if exp="f.stamp_tokiwakoenn==true && f.stamp_kinntaikyo==true && f.stamp_kaikyokann==true"]
+    [glink text="元乃隅神社" size=20 color="btn_22_red"  x="200" y="200" storage="spots/tokiwakoenn/first.ks" target="*start"]
+[else]
+    [glink text="?????" size=20 color="btn_22_red"  x="200" y="200" storage="simulator/map.ks" target="*stamp"]
+[endif]
 
 [glink text="常盤公園" size=20 color="btn_22_green"  x="393" y="469" storage="spots/tokiwakoenn/first.ks" target="*start"]
 [glink text="海響館"   size=20 color="btn_22_blue"   x="225" y="480" storage="spots/kaikyokann/first.ks" target="*start"]
 [glink text="錦帯橋"   size=20 color="btn_22_yellow" x="800" y="362" storage="spots/kinntaikyo/first.ks" target="*start"]
-
-[glink storage=simulator/map.ks target=*stamp  x=10 y=10 text=stamp color=btn_22_red]
 [s]
 
 *stamp
