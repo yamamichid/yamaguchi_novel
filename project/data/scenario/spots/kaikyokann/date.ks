@@ -9,6 +9,9 @@
 あなたはこれから彼女を水族館のデートに誘います[l][r]
 手紙に彼女と自身の名前を記入し，送信しましょう[l][r]
 
+;[jump target=*P6A]
+
+
 *letter_edit
 [layopt layer="message0" visible="false"]
 [image layer="1" storage="spots/kaikyokann/ask_date1.png" height=600 width=800 x=240 y=50]
@@ -45,6 +48,7 @@
 
 ;表情の登録
 [chara_face name="heroine" face="feel" storage="chara/kaikyokann/heroine2.webp"]
+[chara_face name="heroine" face="shy" storage="chara/kaikyokann/heroine3.webp"]
 [chara_face name="heroine" face="angry" storage="chara/kaikyokann/heroine7.webp"]
 [chara_face name="heroine" face="surprice" storage="chara/kaikyokann/heroine4.webp"]
 
@@ -57,6 +61,7 @@
 
 [iscript]
 f.flag = false
+f.souve_flag = false
 f.fav = 0
 [endscript]
 
@@ -187,6 +192,9 @@ f.flag = true
 #hero
 「自分も初めて」[l][cm]
 ...いい雰囲気かもしれない...!![l][r]
+[iscript]
+f.fav += 100
+[endscript]
 [freeimage layer=base]
 二人はイルカショーへ[l][cm]
 [jump target=*P4]
@@ -210,7 +218,7 @@ f.flag = true
 #heroine
 「きゃっ」[l][cm]
 #hero
-「水族館はカップルの距離を縮める！！」[l][cm]
+水族館はカップルの距離を縮める！！[l][cm]
 [jump target=*P5]
 
 
@@ -235,19 +243,146 @@ f.flag = true
 #
 それから二人は館内を次々と見て回った[l][cm]
 
-[bg storage=spots/kaikyokann/kabutogani.jpg time=2500]
+[bg storage=spots/kaikyokann/kabutogani.jpg time=1000]
 #
 カブトガニ Tachypleus tridentatus (Leach, 1819)[r]
-カブトガニは背面全体が広く背甲で覆われ、脚などの付属肢はすべてその下に隠れている
-[cm]
-[bg storage=spots/kaikyokann/fugu.jpg time=2500]
-[bg storage=spots/kaikyokann/sunameri2.jpg time=2500]
-[bg storage=spots/kaikyokann/pen5.jpg time=2500]
+カブトガニは背面全体が広く背甲で覆われ、脚などの付属肢はすべてその下に隠れている[l][cm]
+[bg storage=spots/kaikyokann/fugu.jpg time=1000][l]
+[bg storage=spots/kaikyokann/sunameri2.jpg time=1000]
+スナメリ Neophocaena phocaenoides (G. Cuvier, 1829)[r]
+日本の沿岸域に生息しており、沿岸域にすむため人間の生活や様々な活動による影響を受けやすい[l][cm]
+[bg storage=spots/kaikyokann/pen5.jpg time=1000]
 #
 オウサマペンギン Aptenodytes patagonicus (Miller, 1778)[r]
-別名キングペンギン
-[cm]
-[bg storage=spots/kaikyokann/kurage.jpg time=2500]
-[cm]
-[bg storage=spots/kaikyokann/fugu2.jpg time=2500]
-[bg storage=spots/kaikyokann/kumanomi.jpg time=2500]
+別名キングペンギン[l][cm]
+[bg storage=spots/kaikyokann/kurage.jpg time=1000][l]
+[bg storage=spots/kaikyokann/fugu2.jpg time=1000][l]
+[bg storage=spots/kaikyokann/kumanomi.jpg time=1000][l]
+
+[freeimage layer=base]
+#
+満足した二人はそろそろ帰ることに[l][r]
+帰り際，お土産屋さんを発見[l][r][cm]
+[bg storage=spots/kaikyokann/souve2.jpg time=500]
+#heroine
+[chara_show name="heroine"]
+「あ，お土産屋さん」[l][r]
+
+[glink color=blue size=30 x=360  width=400 y=100 target=*souve text=寄る]
+[glink color=blue size=30 x=360  width=400 y=200 target=*no_souve text=寄らない]
+[s]
+*souve
+[web url="http://www.kaikyokan.com/floormap/shop/"]
+
+#
+ショップが開きます．ぜひご覧になってください[l][cm]
+#hero
+リアルペンギンシリーズ　ぬいぐるみ(税込3,190円)をプレゼント[l][r][cm]
+
+#heroine:shy
+「.........うれしい．ありがとう．」[l][r]
+「大切にするね」[l][cm]
+[chara_hide name=heroine time=300]
+[iscript]
+f.souve_flag = true
+[endscript]
+#hero
+彼女の為になら僕は借金でもするだろう！[l][cm]
+[jump target=*P6]
+
+* no_souve
+#hero
+「ごめん...お金ないんだ」[l][cm]
+
+#heroine
+「そう，少し残念」[l][r][cm]
+#
+彼女は少し悲しそうにしている[l][cm]
+[chara_hide name=heroine time=300]
+#hero
+「........................」[l][r]
+「出よっか」[l][cm]
+[jump target=*P6]
+
+*P6
+[freeimage layer=base]
+[chara_hide name=heroine time=300]
+#
+水族館を後にした二人[l][r]
+外は夕暮れ，雰囲気は最高潮[l][cm]
+[bg storage=spots/kaikyokann/sunset.jpg time=500]
+
+#heroine
+[chara_show name="heroine"]
+「今日は楽しかった」[l][r]
+「デート，誘ってくれてありがとう」[l][cm]
+
+#hero
+「うん，自分も楽しかった」[l][r]
+「また行こうね」[l][cm]
+
+#heroine
+「うん」[l][cm]
+
+#hero
+「............................................」[l][r]
+
+#
+不意に訪れる沈黙．どうする？[l][cm]
+
+[glink color=blue size=30 x=360 width=400 y=100 target=*P6A text=手をつなぐ]
+[glink color=blue size=30 x=360 width=400 y=200 target=*P6B text=まだやめておこう]
+[s]
+
+
+*P6A
+[chara_hide name=heroine time=300]
+[layopt layer="message0" visible="false"]
+
+[bg storage=spots/kaikyokann/donten.jpg time=500]
+[image layer=1 storage=spots/kaikyokann/zeus.png visible=true top=50 left=280 width=600 height=600]
+[image layer=1 storage=spots/kaikyokann/destiny.png visible=true top=550 left=350 width=580 height=220 ]
+[l]
+
+[freeimage layer=1]
+[bg storage=spots/kaikyokann/sunset.jpg time=500]
+
+[jump target=*P6A_1 cond="f.flag && f.souve_flag"]
+*P6A_1
+
+[layopt layer="message0" visible="true"]
+#
+....................[l][r]
+彼女はそっと手を握り返す[l][cm]
+
+#heroine
+[chara_show name="heroine" face="shy"]
+「実はずっと手をつなぎたかったの」[l][r]
+「でも恥ずかしくて...」[l][cm]
+[chara_hide name=heroine time=300]
+
+
+#hero
+「......................」[l][r]
+何だこの気持ちは.............!!!![l][cm]
+胸が.....胸がドキドキしている.......!!!![l][cm]
+
+#heroine
+[chara_show name="heroine"]
+「[emb exp="f.hero_name"]」[l][r]
+「............................」[l][cm]
+#heroine:shy
+「好きよ」[l][r]
+
+[chara_hide name=heroine time=300]
+[layopt layer="message0" visible="false"]
+
+[bg storage=spots/kaikyokann/sky2.jpg time=500]
+;[image layer=1 storage=spots/kaikyokann/bell.jpg visible=true top=50 left=280 width=600 height=600]
+[image layer=1 storage=spots/kaikyokann/congratulations.png visible=true top=530 left=350 width=600 height=230 ]
+[l]
+
+
+
+
+
