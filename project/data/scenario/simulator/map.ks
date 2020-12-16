@@ -33,9 +33,6 @@
 
 *stamp
 
-[eval exp="f.stamp_kinntaikyo=true"]
-[eval exp="f.stamp_kaikyokann=false"]
-
 
 [layopt layer=1 visible=true]
 
