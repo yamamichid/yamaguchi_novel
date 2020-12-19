@@ -1,10 +1,11 @@
 *start
 
-[title name="常盤公園"]
-[stop_keyconfig]
+;初期設定
 @call storage="tyrano.ks"
 @layopt layer="message" visible=false
 [hidemenubutton]
+[freeimage layer=1]
+[position layer=message0 left="16" top="504" width="1248" height="200" frame="none" marginl="1" margint="1" marginr="1" marginb="1" ]
 
 [iscript]
 tf.feeling = 10

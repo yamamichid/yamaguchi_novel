@@ -8,6 +8,11 @@
 ．．．夢か。[r]
 [p][cm]
 
+使用させていただいた素材[r]
+七三ゆきのアトリエ[r]
+https://nanamiyuki.com/[r]
+[p][cm]
+
 [position height=200 width=1240 frame="none"]
 @layopt layer=message0 visible=false
 
