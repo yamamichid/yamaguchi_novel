@@ -1,6 +1,6 @@
 *kintaikyo_lose_end
 
-[bg storage=spots/kinntaikyo/kintaikyo_bedroom.png time=3000]
+[bg storage=spots/kinntaikyo/kintaikyo_end.png time=3000]
 
 「．．．．．．」[r]
 [p][cm]

@@ -15,6 +15,9 @@
 ; メッセージ表示場所を設定
 @layopt layer=message0 visible=true
 
+; SEの音量
+[seopt volume=10]
+
 目が覚めると、[r]
 そこは、錦川だった。[r]
 [p][cm]
@@ -36,25 +39,32 @@
 「！！！」[r]
 [p][cm]
 
+; 削除予定
+@jump target=*fight2_1
+; これだけ
+
 [chara_new name="iwagoron" storage="spots/kinntaikyo/iwagoron_1.png" jname="イワゴロン"]
-[chara_show name="iwagoron"]
+[chara_show name="iwagoron" x=10 y=10]
 イワゴロンが現れた！
 [p][cm]
 
-*fight_stage1_1
+*fight1_1
 
 どうする？[r]
-[link target=*fight1_lose]たたかう[r]
-[link target=*tool1_1]どうぐ[r]
+[glink color=blue size=30 x=360 width=400 y=400 target=*fight1_lose text=たたかう]
+[glink color=blue size=30 x=360 width=400 y=500 target=*tool1_1 text=どうぐ]
 [s]
 
 *fight1_lose
 [cm]
 イワゴロンに攻撃！[r]
+[playse storage="spots/kinntaikyo/attack.ogg"]
 イワゴロンに1のダメージ！[r]
 [p][cm]
 
 イワゴロンの攻撃！[r]
+[playse storage="spots/kinntaikyo/iwagoron_attack.ogg"]
+[wait time=5000]
 100000000のダメージを受けた！[r]
 [p][cm]
 
@@ -63,7 +73,6 @@
 [p][cm]
 @jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
 
-
 *tool1_1
 [cm]
 [link target=*renkon]岩国レンコンチップス[r]
@@ -71,8 +80,8 @@
 
 *renkon
 [cm]
-[link target=*eat_renkon]たべる[r]
-[link target=*give_renkon]あげる[r]
+[glink color=blue size=30 x=360 width=400 y=100 target=*eat_renkon text=たべる]
+[glink color=blue size=30 x=360 width=400 y=200 target=*give_renkon text=あげる]
 [s]
 
 *eat_renkon
@@ -86,7 +95,7 @@ f.eat="岩国レンコンチップス"
 [p][cm]
 パワーがアップした！[r]
 [p][cm]
-@jump target=*stage1_2
+@jump target=*fight1_2
 
 *give_renkon
 [cm]
@@ -104,15 +113,16 @@ f.enemy1_eat = "岩国レンコンチップス"
 [p][cm]
 @jump target=*story2
 
-*stage1_2
+*fight1_2
 どうする？[r]
-[link target=*fight1_win]たたかう[r]
-[link target=*tool1_2]どうぐ[r]
+[glink color=blue size=30 x=360 width=400 y=100 target=*fight1_win text=たたかう]
+[glink color=blue size=30 x=360 width=400 y=200 target=*tool1_2 text=どうぐ]
 [s]
 
 *fight1_win
 [cm]
 イワゴロンに999のダメージ！[r][p]
+[playse storage="spots/kinntaikyo/attack.ogg"]
 イワゴロンをたおした！[r]
 [chara_hide name=iwagoron]
 @jump target=*story2
@@ -122,7 +132,7 @@ f.enemy1_eat = "岩国レンコンチップス"
 どうぐは持っていない
 [wait time=2000]
 [cm]
-@jump target=*stage1_2
+@jump target=*fight1_2
 
 *story2
 [p][cm]
@@ -169,13 +179,13 @@ f.enemy1_eat = "岩国レンコンチップス"
 [p][cm]
 
 「倒しに行っててくれんか？」[r]
-[link target=*story2_2]はい[r]
-[link target=*story2_2]YES[r]
-[p][cm]
+[glink color=blue size=30 x=360 width=400 y=100 target=*story2_2 text=はい]
+[glink color=blue size=30 x=360 width=400 y=200 target=*story2_2 text=YES]
+[s]
 
 *story2_2
 「おぉ！これはありがたい！[r]
-健闘を祈っておるぞ！」
+健闘を祈っておるぞ！」[r]
 [p][cm]
 
 俺[r]
@@ -195,10 +205,136 @@ f.enemy1_eat = "岩国レンコンチップス"
 ！！！
 [p][cm]
 
-*stage2_1
+*fight2_1
 [chara_new name="cormorantdevil" storage="spots/kinntaikyo/cormorantdevil_1.png" jname="コモラントデビル"]
 [chara_show name="cormorantdevil"]
 コモラントデビルが現れた！[r]
 [p][cm]
+
+どうする？[r]
+[link target=*fight2_lose1]たたかう[r]
+[link target=*tool2_1]どうぐ[r]
+[s]
+
+*fight2_lose1
+[cm]
+コモラントデビルに攻撃！[r]
+[playse storage="spots/kinntaikyo/attack.ogg"]
+コモラントデビルに1のダメージ！[r]
+[p][cm]
+
+コモラントデビルの攻撃！[r]
+[playse storage="spots/kinntaikyo/cormorantdevil_attack.ogg"]
+[wait time=2000]
+[stopse ]
+99999のダメージを受けた！[r]
+[p][cm]
+
+負けてしまった......。[r]
 [chara_hide name=cormorantdevil]
+[p][cm]
+@jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
+
+
+*tool2_1
+[cm]
+[link target=*softcream]ソフトクリーム[r]
+[s]
+
+*softcream
+[cm]
+[link target=*eat_softcream]たべる[r]
+[link target=*give_softcream]あげる[r]
+[s]
+
+*eat_softcream
+[cm]
+[iscript]
+f.eat="ソフトクリーム"
+[endscript]
+ソフトクリームを食べた。[r]
+[p][cm]
+
+．．．．．．[r]
+[p]
+これは、納豆味だ！[r]
+[p][cm]
+
+嫌いじゃないけど．．．．。[r]
+[r]
+[p][cm]
+@jump target=*fight2_2
+
+*give_softcream
+[cm]
+[iscript]
+f.enemy1_eat = "ソフトクリーム"
+[endscript]
+
+ソフトクリームをあげた。[r]
+[p][cm]
+
+う、[p]う[p]、う、[p]
+うめ～～～～～！！[r]
+[p][cm]
+
+コモラントデビルは逃げていった。[r]
+[p][cm]
+
+[chara_hide name=cormorantdevil]
+[p][cm]
+@jump target=*story3
+
+*fight2_2
+どうする？[r]
+[link target=*fight2_lose2]たたかう[r]
+[link target=*tool2_2]どうぐ[r]
+[s]
+
+*fight2_lose2
+[cm]
+コモラントデビルに9のダメージ！[r]
+[playse storage="spots/kinntaikyo/attack.ogg"]
+[p][cm]
+
+コモラントデビルの攻撃！[r]
+[playse storage="spots/kinntaikyo/cormorantdevil_attack.ogg"]
+[wait time=2000]
+[stopse ]
+500のダメージ！[r]
+[p][cm]
+
+負けてしまった．．．。
+[p][cm]
+[chara_hide name=cormorantdevil]
+@jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
+
+*tool2_2
+[cm]
+どうぐは持っていない
+[wait time=2000]
+[cm]
+@jump target=*fight2_2
+
+*story3
+
+ふぅ、何とかなったな。[r]
+[p][cm]
+
+ん？ここは．．．。[r][p]
+白蛇観覧所か．．．。[r]
+[p][cm]
+
+[glink color=blue size=30 x=360 width=400 y=100 target=*shirohebi text=寄る]
+[glink color=blue size=30 x=360 width=400 y=200 target=*story3_1 text=寄らない]
+[s]
+
+*shirohebi 
+ココが白蛇観覧所か。[r]
+[p][cm]
+
+*story3_1
+ロープウェイで岩国城へ[r]
+[p][cm]
+
 @jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
