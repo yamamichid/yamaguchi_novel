@@ -6,6 +6,9 @@
 @layopt layer="message" visible=false
 [hidemenubutton]
 
+[iscript]
+tf.feeling = 10
+[endscript]
 
 [wait time=200]
 [bg storage=spots/tokiwakoenn/enter.jpg]
@@ -33,64 +36,126 @@
 
 リフレッシュが必要だと考えた俺は、近所のときわ公園にきた。[l][r][cm]
 「どこに行こうか？」[l][r][cm]
-[link target=*select_shrine]①神社[endlink][r]
-;[link target=*select_sculpture]②彫刻[endlink][r]
-;[link target=*select_flower]③花畑[endlink][r]
+[glink text="①神社" size=30 color="btn_20_black" x="430" width="400" y="100" storage="spots/tokiwakoenn/shrine.ks"]
+[glink text="②彫刻" size=30 color="btn_20_black" x="430" y="200" width="400" target="*select_sculpture"]
 [s]
-
-; 神社のストーリー
-*select_shrine
-[bg storage=spots/tokiwakoenn/shrine.jpg time=500][l]
-[bg storage=spots/tokiwakoenn/shrine2.jpg time=500]
-[cm]
-お賽銭はいくらにしようか？[l][r][cm]
-[link target=*select_0yen] 0円[r]
-[link target=*select_5yen] 5円[r]
-[s]
-
-
-*select_0yen
-[cm]
-「神様なんているわけないよな、やめておこう」[l][r][cm]
-．．．[l][r][cm]
-[bg storage=spots/tokiwakoenn/black.png time=300]
-誰も頼ることができないと思った俺は、多大なストレスを抱え大学院を中退した、鬱病だった。[l][r]
-その後も病気に悩まされ、社会人として働くことは難しくなってしまった。[l][r][cm]
-現在は実家で暮らし、時々日雇いのバイトに行っている。[l][r][cm]
-[wait time=500]
-@layopt layer=message0 visible=false
-@jump storage=simulator/map.ks target=*map
-
-*select_5yen
-[cm]
-「良いご縁がありますように」[l][r][cm]
-．．．[l][r][cm]
-少し気持ちが楽になった気がした。[l][r][cm]
-「他にもどこか行こうか？」[l][r]
-[link target=*select_go_home]①帰る[endlink][r]
-[link target=*select_somewhere]②他にもどこか行く[endlink][r]
-[s]
-
-*select_go_home
-[bg storage=spots/tokiwakoenn/black.png time=500]
-あの後、少し気持ちが楽になった気がした。[l][r][cm]
-研究の成果は決して良くなかったが必死に喰らいつき、何とか大学院を修了できた。[l][r]
-就活は参加したイベントでベンチャー企業から声を掛けてもらい、現在もそこで働いている。[l][r][cm]
-新しい出会いもあり、結婚した。[l][r]
-忙しく自由な時間は少ないがそれなりに幸せな生活を送っている。[l][r][cm]
-ふとあの時の5円のおかげだったのではないかと考えることがある、、、[l]俺らしくないか（苦笑）[l]
-[wait time=500]
-@layopt layer=message0 visible=false
-@jump storage=simulator/map.ks target=*map
 
 
 *select_somewhere
 まだ未実装です。[l]
 @layopt layer=message0 visible=false
-@jump storage=simulator/map.ks target=*map
+@jump target=*end
 
 ; 彫刻のストーリー
 *select_sculpture
-まだ未実装です。[l]
+
+彫刻でも見に行くか。[l][r][cm]
+
+[bg storage=spots/tokiwakoenn/sculpture1.jpg]
+
+タイトル「ク・ラ・ゲ・だぞー」[l][r]
+説明「
+責任を負いながら時間に追われ、仕事に追われる生活をしている現代人。[l][r]
+'''もっと自由に生きたい、もっと広い世界で自分の夢を追いかけたい、そして伸び伸びと行きたい'''[l][r]
+多くの現代人がそのような願望を持っている。[l][r]
+広い海の中を優雅に動き、自分らしく生きているクラゲ、このクラゲの姿を借りて、現代人の願望を表現した。」[l][r][cm]
+まるで自分に向けたメッセージのようだ、もっと気楽に生きていけば良いんだろうか。[l][r][cm]
+
+
+[bg storage=spots/tokiwakoenn/sculpture2.jpg]
+
+タイトル「蟻の城」[l][r]
+説明「宇部市民なら昔から誰でも知っている記念すべき彫刻である。[l][r]
+常盤公園の芝生の丘の展示場で毎年出品作はいろいろ変わっても、向井良吉の蟻の城だけは四十数年たった今も常設されて動くことがない。[l][r]
+というのも、作者は柳原義達、大高正人氏らとともにこの展示場をみずからブルを操って切り拓いた立役者であるからだ。[l][r]
+62年に宇部市が宇部をテーマに五人の作家に模型制作を依頼、向井の蟻の城だけが実物大に制作され、今日までその偉容を保っている。[l][r]
+当時は鉄錆がふいたままだったが、今は一部改造され鮮やかなカーキ塗料で表面保護されている。」[l][r][cm]
+どうやら有名な彫刻らしい、四十数年動いていないのは驚きである。[l][r]
+展示場を開くための多大な努力があって残っているんだな、自分も見習わなければ。[l][r]
+
+ちょっと休憩しようか？[l][r]
+
+[glink text="①休憩する" name="gilink_center" size=30 color="btn_20_black" x="430" width="400" y="100" width="400" target="*select_break"]
+[glink text="②休憩しない" name="gilink_center" size=30 color="btn_20_black" x="430" width="400" y="200" width="400" target="*select_no_break"]
+
+;[iscript]
+;$(".glink_center").css("left","50%");
+;$(".glink_center").css("transform","translateX(-50%)");
+;[endscript]
+
+[s]
+
+;休憩する場合
+*select_break
+[bg storage=spots/tokiwakoenn/bench.jpg]
+湖のそばにベンチがあるな、そこに座ろう。[l][r]
+[wait time=500]
+[bg storage=spots/tokiwakoenn/lake.jpg]
+。。。[l][r]
+ボーっと湖を眺めていると優しそうなおばあさんが隣に腰かけてきた。[l][r][cm]
+
+おばあさん「こんにちは」[l][r]
+俺「こんにちは」[l][r]
+おばあさん「元気なさそうだけど大丈夫？」[l][r]
+
+[glink text="①元気です！" size=30 color="btn_20_black" x="430" width="400" y="100" target="*select_fine"]
+[glink text="②人生に疲れています" size=30 color="btn_20_black" x="430" width="400" y="200" target="*select_tired"]
+
+[s]
+
+;元気ですの場合
+*select_fine
+未実装です。[l][r]
+@jump target=*end
+
+;疲れていますの場合
+*select_tired
+おばあさん「やっぱり、あなたを不幸にする悪い霊が憑いているわ。」[l][r]
+
+[glink text="①「そんな、どうすれば」" size=30 color="btn_20_black" x="430" width="400" y="100" target="*select_worry"]
+[glink text="②「霊が見えるんですか？」" size=30 color="btn_20_black" x="430" width="400" y="200" target="*select_question"]
+
+[s]
+
+*select_worry
+おばあさん「このお守りに毎晩祈りなさい、そうすればあなたはシアワセになれるわ」[l][r]
+俺「ありがとうございます、毎晩お祈りします！」[l][r]
+
+*pray
+[bg storage=spots/tokiwakoenn/black.png]
+。。。[l][r][cm]
+あれから、毎晩お祈りを続けている。[l][r]
+大切なことは勉強することでも就職することでもない、ただお祈りするだけだったのだ。[l][r]
+シアワセニナレマスヨウニ、シアワセニナレマスヨウニ...[l][r]
+@jump target=*end
+
+*select_question
+おばあさん「ええ、あなたを守るお守りがあるわ、これに毎日お祈りしなさい」[l][r]
+
+[glink text="①受け取る" size=30 color="btn_20_black" x="430" width="400" y="100" target="*pray"]
+[glink text="②「いえ、結構です」" size=30 color="btn_20_black" x="430" width="400" y="200" target="*select_refusal"]
+
+[s]
+
+*select_refusal
+[bg storage=spots/tokiwakoenn/black.png]
+未実装
+
+@jump target=*end
+
+;休憩しない場合
+*select_no_break
+少し早いけど帰ろうか？[l][r][cm]
+[bg storage=spots/tokiwakoenn/black.png]
+。。。[l][r]
+あの時、彫刻作品から「もっと自由で自分らしく」と言われた気がした。[l][r]
+取り繕うような生き方を辞めた結果、以前よりも物事を楽観的に考えられるようになった。[l][r]
+現在は小さな企業で「誠実さ」を意識して働いている。[l][r]
+
+@jump target=*end
+
+
+
+*end
 @layopt layer=message0 visible=false
 @jump storage=simulator/map.ks target=*map
