@@ -256,8 +256,15 @@ f.fav += 100
 オウサマペンギン Aptenodytes patagonicus (Miller, 1778)[r]
 別名キングペンギン[l][cm]
 [bg storage=spots/kaikyokann/kurage.jpg time=1000][l]
+#
+ミズクラゲ Aurelia aurita[r]
+日本近海でも最も普通に観察できるクラゲ.ヨツメクラゲとも呼ばれる[l][cm]
 [bg storage=spots/kaikyokann/fugu2.jpg time=1000][l]
 [bg storage=spots/kaikyokann/kumanomi.jpg time=1000][l]
+#
+カクレクマノミ Amphiprion ocellaris (Lacépède, 1802)[r]
+オレンジ色の体に3本の白い帯と黒いひれがある[l][cm]
+
 
 [freeimage layer=base]
 #
@@ -301,7 +308,7 @@ f.souve_flag = true
 [chara_hide name=heroine time=300]
 #hero
 「........................」[l][r]
-「出よっか」[l][cm]
+「行こっか」[l][cm]
 [jump target=*P6]
 
 *P6
@@ -347,9 +354,10 @@ f.souve_flag = true
 [freeimage layer=1]
 [bg storage=spots/kaikyokann/sunset.jpg time=500]
 
-[jump target=*P6A_1 cond="f.flag && f.souve_flag"]
-*P6A_1
+[jump target=*P6B_bad cond="f.flag || f.souve_flag==false"]
+[jump target=*P6B_normal]
 
+*P6A_good
 [layopt layer="message0" visible="true"]
 #
 ....................[l][r]
@@ -364,7 +372,7 @@ f.souve_flag = true
 
 #hero
 「......................」[l][r]
-何だこの気持ちは.............!!!![l][cm]
+何だこの気持ちは.............[l][cm]
 胸が.....胸がドキドキしている.......!!!![l][cm]
 
 #heroine
@@ -381,8 +389,78 @@ f.souve_flag = true
 ;[image layer=1 storage=spots/kaikyokann/bell.jpg visible=true top=50 left=280 width=600 height=600]
 [image layer=1 storage=spots/kaikyokann/congratulations.png visible=true top=530 left=350 width=600 height=230 ]
 [l]
+[jump target=*P7]
 
+*P6B
+[chara_hide name=heroine time=300]
+[layopt layer="message0" visible="false"]
 
+[bg storage=spots/kaikyokann/donten.jpg time=500]
+[image layer=1 storage=spots/kaikyokann/zeus.png visible=true top=50 left=280 width=600 height=600]
+[image layer=1 storage=spots/kaikyokann/destiny.png visible=true top=550 left=350 width=580 height=220 ]
+[l]
 
+[freeimage layer=1]
+[bg storage=spots/kaikyokann/sunset.jpg time=500]
+[jump target=*P6B_bad cond="f.souve_flag==false"]
 
+*P6B_normal
+[layopt layer="message0" visible="true"]
+#heroine
+[chara_show name="heroine"]
+「......................」[l][r]
+「[emb exp="f.hero_name"].......聞いてほしいの」[l][cm]
+
+#hero
+「どうしたの..............？」[l][cm]
+
+#heroine
+「実は私...................」[l][cm]
+「海の生き物が大好きなの」[l][cm]
+
+#hero
+「......................？」[l][r]
+「そうなんだ！」[l][cm]
+......思っていた展開と違う[l][cm]
+
+#heroine
+「........何突っ立ってんの」[l][r]
+「帰るわよ」[l][cm]
+
+[chara_hide name=heroine time=300]
+[layopt layer="message0" visible="false"]
+[bg storage=spots/kaikyokann/shiba.jpg time=500]
+[image layer=1 storage=spots/kaikyokann/cat.png visible=true top=20 left=300 width=779 height=685]
+[image layer=1 storage=spots/kaikyokann/normal_clear.png visible=true top=530 left=350 width=600 height=230 ]
+[l]
+[jump target=*P7]
+
+*P6B_bad
+[layopt layer="message0" visible="true"]
+#heroine
+[chara_show name="heroine"]
+「[emb exp="f.hero_name"]」[l][r]
+「話したいことがあるの」[l][cm]
+
+#hero
+「どうしたの..............？」[l][cm]
+
+#heroine
+「.......................」[l][r]
+「あなたに恋心はなくなりましたさようなら」[l][cm]
+[chara_hide name=heroine time=300]
+
+#
+[emb exp="f.heroine_name"]は立ち去り,[emb exp="f.hero_name"]は一人になりました．[l][r]
+彼は日が沈むまで太陽を眺めた後，夜の闇の中に消えてゆきました．[l][cm]
+[layopt layer="message0" visible="false"]
+
+[bg storage=spots/kaikyokann/yami.jpg time=500]
+[image layer=1 storage=spots/kaikyokann/game_over.png visible=true top=530 left=350 width=600 height=230 ]
+[l]
+[jump target=*P7]
+
+*P7
+[jump target=*P7]
+@jump storage=simulator/map.ks target=*map
 
