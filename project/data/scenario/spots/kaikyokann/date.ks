@@ -255,12 +255,12 @@ f.fav += 100
 #
 オウサマペンギン Aptenodytes patagonicus (Miller, 1778)[r]
 別名キングペンギン[l][cm]
-[bg storage=spots/kaikyokann/kurage.jpg time=1000][l]
+[bg storage=spots/kaikyokann/kurage.jpg time=1000]
 #
 ミズクラゲ Aurelia aurita[r]
 日本近海でも最も普通に観察できるクラゲ.ヨツメクラゲとも呼ばれる[l][cm]
 [bg storage=spots/kaikyokann/fugu2.jpg time=1000][l]
-[bg storage=spots/kaikyokann/kumanomi.jpg time=1000][l]
+[bg storage=spots/kaikyokann/kumanomi.jpg time=1000]
 #
 カクレクマノミ Amphiprion ocellaris (Lacépède, 1802)[r]
 オレンジ色の体に3本の白い帯と黒いひれがある[l][cm]
@@ -461,6 +461,5 @@ f.souve_flag = true
 [jump target=*P7]
 
 *P7
-[jump target=*P7]
 @jump storage=simulator/map.ks target=*map
 
