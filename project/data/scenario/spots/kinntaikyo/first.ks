@@ -39,20 +39,20 @@
 「！！！」[r]
 [p][cm]
 
-; 削除予定
-@jump target=*fight2_1
-; これだけ
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;@jump target=go_shirohebi_yakata
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [chara_new name="iwagoron" storage="spots/kinntaikyo/iwagoron_1.png" jname="イワゴロン"]
-[chara_show name="iwagoron" x=10 y=10]
+[chara_show name="iwagoron" x=10 y=10 top=100]
 イワゴロンが現れた！
 [p][cm]
 
 *fight1_1
 
 どうする？[r]
-[glink color=blue size=30 x=360 width=400 y=400 target=*fight1_lose text=たたかう]
-[glink color=blue size=30 x=360 width=400 y=500 target=*tool1_1 text=どうぐ]
+[glink color=blue size=30 x=360 width=400 y=500 target=*fight1_lose text=たたかう]
+[glink color=blue size=30 x=360 width=400 y=600 target=*tool1_1 text=どうぐ]
 [s]
 
 *fight1_lose
@@ -75,13 +75,13 @@
 
 *tool1_1
 [cm]
-[link target=*renkon]岩国レンコンチップス[r]
+[glink color=blue size=30 x=360 width=400 y=500 target=*renkon text=岩国レンコンチップス]
 [s]
 
 *renkon
 [cm]
-[glink color=blue size=30 x=360 width=400 y=100 target=*eat_renkon text=たべる]
-[glink color=blue size=30 x=360 width=400 y=200 target=*give_renkon text=あげる]
+[glink color=blue size=30 x=360 width=400 y=500 target=*eat_renkon text=たべる]
+[glink color=blue size=30 x=360 width=400 y=600 target=*give_renkon text=あげる]
 [s]
 
 *eat_renkon
@@ -99,24 +99,20 @@ f.eat="岩国レンコンチップス"
 
 *give_renkon
 [cm]
-[iscript]
-f.enemy1_eat = "岩国レンコンチップス"
-[endscript]
-
 岩国レンコンチップスをあげた。[r]
 岩国レンコンの特徴は、9つの穴だ。[r]
 おつまみにぴったりだ！[r]
 [p][cm]
-「こんなおいしいものを作る場所を荒らしてごめんなさい！」[r]
-イワゴロンは反省して帰っていった。[r]
+「カリカリしておいしい！レンコンの風味もいいね！」[r]
+イワゴロンは満足して帰っていった。[r]
 [chara_hide name=iwagoron]
 [p][cm]
 @jump target=*story2
 
 *fight1_2
 どうする？[r]
-[glink color=blue size=30 x=360 width=400 y=100 target=*fight1_win text=たたかう]
-[glink color=blue size=30 x=360 width=400 y=200 target=*tool1_2 text=どうぐ]
+[glink color=blue size=30 x=360 width=400 y=500 target=*fight1_win text=たたかう]
+[glink color=blue size=30 x=360 width=400 y=600 target=*tool1_2 text=どうぐ]
 [s]
 
 *fight1_win
@@ -169,8 +165,7 @@ f.enemy1_eat = "岩国レンコンチップス"
 
 俺[r]
 へぇ～。ありがとうございます。[r]
-(なんでそんなに種類あんだ？[r]
-あと，何味か教えて！)[r]
+(なんでそんなに種類あんだ？)[r]
 [p][cm]
 
 おじいさん[r]
@@ -189,8 +184,7 @@ f.enemy1_eat = "岩国レンコンチップス"
 [p][cm]
 
 俺[r]
-．．．．．．．．．。[p][r]
-(強引では！？)[r]
+．．．．．．．．．。[r]
 [p][cm]
 
 俺は錦帯橋を渡り，岩国城へ向かった。[r][p]
@@ -207,13 +201,13 @@ f.enemy1_eat = "岩国レンコンチップス"
 
 *fight2_1
 [chara_new name="cormorantdevil" storage="spots/kinntaikyo/cormorantdevil_1.png" jname="コモラントデビル"]
-[chara_show name="cormorantdevil"]
+[chara_show name="cormorantdevil" top=100]
 コモラントデビルが現れた！[r]
 [p][cm]
 
 どうする？[r]
-[link target=*fight2_lose1]たたかう[r]
-[link target=*tool2_1]どうぐ[r]
+[glink color=blue size=30 x=360 width=400 y=500 target=*fight2_lose1 text=たたかう]
+[glink color=blue size=30 x=360 width=400 y=600 target=*tool2_1 text=どうぐ]
 [s]
 
 *fight2_lose1
@@ -238,30 +232,27 @@ f.enemy1_eat = "岩国レンコンチップス"
 
 *tool2_1
 [cm]
-[link target=*softcream]ソフトクリーム[r]
+[glink color=blue size=30 x=360 width=400 y=500 target=*softcream text=ソフトクリーム]
 [s]
 
 *softcream
 [cm]
-[link target=*eat_softcream]たべる[r]
-[link target=*give_softcream]あげる[r]
+[glink color=blue size=30 x=360 width=400 y=500 target=*eat_softcream text=たべる]
+[glink color=blue size=30 x=360 width=400 y=600 target=*give_softcream text=あげる]
 [s]
 
 *eat_softcream
 [cm]
-[iscript]
-f.eat="ソフトクリーム"
-[endscript]
 ソフトクリームを食べた。[r]
 [p][cm]
 
 ．．．．．．[r]
 [p]
-これは、納豆味だ！[r]
+これは、ワサビ味だ！[r]
 [p][cm]
 
-嫌いじゃないけど．．．．。[r]
-[r]
+．．．。[r]
+結構いける！[r]
 [p][cm]
 @jump target=*fight2_2
 
@@ -274,7 +265,8 @@ f.enemy1_eat = "ソフトクリーム"
 ソフトクリームをあげた。[r]
 [p][cm]
 
-う、[p]う[p]、う、[p]
+コモラントデビル[r]
+う、[l]う、、[l]う、、、[l]
 うめ～～～～～！！[r]
 [p][cm]
 
@@ -287,8 +279,8 @@ f.enemy1_eat = "ソフトクリーム"
 
 *fight2_2
 どうする？[r]
-[link target=*fight2_lose2]たたかう[r]
-[link target=*tool2_2]どうぐ[r]
+[glink color=blue size=30 x=360 width=400 y=500 target=*fight2_lose2 text=たたかう]
+[glink color=blue size=30 x=360 width=400 y=600 target=*tool2_2 text=どうぐ]
 [s]
 
 *fight2_lose2
@@ -318,23 +310,199 @@ f.enemy1_eat = "ソフトクリーム"
 
 *story3
 
-ふぅ、何とかなったな。[r]
+俺[r]
+「ふぅ、何とかなったな。」[r]
 [p][cm]
 
-ん？ここは．．．。[r][p]
-白蛇観覧所か．．．。[r]
+
+俺[r]
+「ん？ここは．．．。[r][p]
+『シロヘビの館』．．．。」[r]
 [p][cm]
 
-[glink color=blue size=30 x=360 width=400 y=100 target=*shirohebi text=寄る]
-[glink color=blue size=30 x=360 width=400 y=200 target=*story3_1 text=寄らない]
+[glink color=blue size=30 x=360 width=400 y=100 target=*go_shirohebi_yakata text=寄る]
+[glink color=blue size=30 x=360 width=400 y=200 target=*not_go_shirohebi_yakata text=寄らない]
 [s]
 
-*shirohebi 
-ココが白蛇観覧所か。[r]
+*go_shirohebi_yakata
+俺[r]
+「はいってみよ。」[r]
 [p][cm]
+[bg storage=spots/kinntaikyo/black.png time=3000]
+
+俺[r]
+「ここが『シロヘビの館』ね。[r]
+で、、、」[r]
+[p][cm]
+
+[bg storage=spots/kinntaikyo/shirohebi_no_yakata.jpg time=3000]
+
+俺[r]
+「これがシロヘビか。[r]
+確かに神秘性があるなぁ。」[r]
+[p][cm]
+
+俺[r]
+「．．．。[r]
+少し願っとくか。」[r]
+[p][cm]
+
+俺[r]
+「早くこの変な話しがおわりますように！」[r]
+[p][cm]
+
+[eval exp="f.shirohebi = 1"]
+@jump target=*story3_1
+
+*not_go_shirohebi_yakata
+
+俺[r]
+「まぁ、いっか。」[r]
+[p][cm]
+
+[eval exp="f.shirohebi = 0"]
+@jump target=*story3_1
 
 *story3_1
-ロープウェイで岩国城へ[r]
+ロープウェイを使って岩国城へ。[r]
 [p][cm]
 
+[bg storage=spots/kinntaikyo/black.png time=2000]
+
+そして、いろいろあって．．．。[r]
+[p][cm]
+
+最終決戦！！！[r]
+[p][cm]
+
+[bg storage=spots/kinntaikyo/iwakuni_castle.jpg time=2000]
+
+*fight3_0
+[chara_new name="sake_nomi_kozou" storage="spots/kinntaikyo/sake_nomi_kozou.png" jname="酒飲み小僧"]
+[chara_show name="sake_nomi_kozou" top=100] 
+酒飲み小僧が現れた！[r]
+[p][cm]
+
+酒飲み小僧[r]
+「この町の酒は全てボクのものだ！！！」[r]
+[p][cm]
+
+どうする？[r]
+[glink color=blue size=30 x=360 width=400 y=500 target=*fight3_1 text=たたかう]
+[glink color=blue size=30 x=360 width=400 y=600 target=*tool3_1 text=どうぐ]
+[s]
+
+*fight3_1
+俺の攻撃！[r]
+52のダメージ！[r]
+[p][cm]
+
+酒飲み小僧の攻撃！[r]
+
+[if exp="f.shirohebi>0"]
+[p][cm]
+
+俺[r]
+うっ！！！[r]
+(まずい！死んじゃう！)[r]
+[p][cm]
+
+その瞬間、不思議なことが起きた。[r]
+[p][cm]
+
+突然、白い大蛇がどこからともなく現れた！[r]
+[p][cm]
+
+大蛇[r]
+「貴様か。[r]
+最近、住みついたというクソ虫は。」[r]
+[p][cm]
+
+酒飲み小僧[r]
+「なんだぁ、このニョロニョロやろう？[r]
+やんのか、コノヤロー！」[r]
+[p][cm]
+
+大蛇[r]
+「やれやれ、変な奴だ。[r]
+不愉快だ。消え失せよ。」[r]
+[p][cm]
+
+大蛇は酒飲み小僧をはるか彼方へ吹き飛ばした[r]
+[p][cm]
+
+[chara_hide name=sake_nomi_kozou]
+
+大蛇[r]
+「で、貴様はいつまでここにいるのだ？」[r]
+[p][cm]
+
+俺[r]
+「？」[r]
+[p][cm]
+
+大蛇[r]
+「さっさと目を覚ませ。観光しに来たのだろう？[r]
+時間は有限だ。しっかり楽しめ。」[r]
+[p][cm]
+@jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_win_end
+
+[else]
+99999999のダメージ[r]
+[p][cm]
+負けてしまった．．．。[r]
+[p][cm]
+[chara_hide name=sake_nomi_kozou]
+@jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
+[endif]
+
+*tool3_1
+[cm]
+[glink color=blue size=30 x=360 width=400 y=500 target=*dassai text=獺祭]
+[s]
+
+*dassai
+[cm]
+[glink color=blue size=30 x=360 width=400 y=500 target=*drink_dassai text=のむ]
+[glink color=blue size=30 x=360 width=400 y=600 target=*give_dassai text=あげる]
+[s]
+
+*drink_dassai
+獺祭を飲んだ！[r]
+ん～～～！！[r]
+[p][cm]
+
+酒飲み小僧[r]
+「俺の前で酒を飲むとは、いい度胸だな！」[r]
+[p][cm]
+
+酒飲み小僧の攻撃！[r]
+99999999のダメージ[r]
+[p][cm]
+
+負けてしまった．．．。[r]
+[p][cm]
+[chara_hide name=sake_nomi_kozou]
+@jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
+
+*give_dassai
+獺祭をあげた。[r]
+[p][cm]
+
+酒飲み小僧[r]
+「おお！獺祭じゃないか！[r]
+岩国といえばこれだよな！」[r]
+[p][cm]
+
+酒飲み小僧[r]
+「御礼にいいモノをやろう！」[r]
+[p][cm]
+
+酒飲み小僧の攻撃！[r]
+99999999のダメージ[r]
+[p][cm]
+
+負けてしまった．．．。[r]
+[p][cm]
+[chara_hide name=sake_nomi_kozou]
 @jump storage=spots/kinntaikyo/end.ks target=*kintaikyo_lose_end
