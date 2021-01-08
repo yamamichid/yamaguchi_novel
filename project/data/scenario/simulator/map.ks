@@ -61,5 +61,4 @@
 [p]
 [freeimage layer=1]
 [jump storage=simulator/map.ks target=*map]
->>>>>>> origin
 [s]
