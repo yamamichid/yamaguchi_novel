@@ -101,7 +101,7 @@ f.fav = 0
 [freeimage layer=base time=600]
 [chara_hide name=heroine time=300]
 #
-水族館デートのはじまりはじまり[l][cm]
+水族館デートのはじまり........[l][cm]
 
 ;場所変更
 [bg storage=spots/kaikyokann/escalator.jpg time=500]
@@ -227,11 +227,11 @@ f.fav += 100
 「みて，イルカ！シンクロしてる！」[l][cm]
 #heroine
 [chara_show name="heroine"]
-「うん」[l][cm]
+「................」[l][cm]
 #hero
 「水しぶきが飛んでくるよ！」[l][cm]
 #heroine
-「うん」[l][cm]
+「................」[l][cm]
 #hero
 「.......................」[l][r]
 「どうやら僕は彼女に嫌われてしまったようだ」[l][cm]
@@ -247,19 +247,24 @@ f.fav += 100
 #
 カブトガニ Tachypleus tridentatus (Leach, 1819)[r]
 カブトガニは背面全体が広く背甲で覆われ、脚などの付属肢はすべてその下に隠れている[l][cm]
-[bg storage=spots/kaikyokann/fugu.jpg time=1000][l]
+[bg storage=spots/kaikyokann/hyouhon.jpg time=1000]
+シロナガスクジラの骨格標本[r]
+日本では海響館にしか存在しない．世界でも数体のみ存在[l][cm]
 [bg storage=spots/kaikyokann/sunameri2.jpg time=1000]
 スナメリ Neophocaena phocaenoides (G. Cuvier, 1829)[r]
 日本の沿岸域に生息しており、沿岸域にすむため人間の生活や様々な活動による影響を受けやすい[l][cm]
 [bg storage=spots/kaikyokann/pen5.jpg time=1000]
 #
 オウサマペンギン Aptenodytes patagonicus (Miller, 1778)[r]
-別名キングペンギン[l][cm]
+別名キングペンギン。コウテイペンギンに次いで大型。2番目に大きな種類のペンギン[l][cm]
 [bg storage=spots/kaikyokann/kurage.jpg time=1000]
 #
 ミズクラゲ Aurelia aurita[r]
 日本近海でも最も普通に観察できるクラゲ.ヨツメクラゲとも呼ばれる[l][cm]
-[bg storage=spots/kaikyokann/fugu2.jpg time=1000][l]
+[bg storage=spots/kaikyokann/po-kyu.jpg time=1000]
+#
+ポーキュパインフィッシュ　allomycterus pilatus[r]
+ポーキュパインとはヤマアラシのことで、全身が棘で覆われている[l][cm]
 [bg storage=spots/kaikyokann/kumanomi.jpg time=1000]
 #
 カクレクマノミ Amphiprion ocellaris (Lacépède, 1802)[r]
@@ -270,7 +275,7 @@ f.fav += 100
 #
 満足した二人はそろそろ帰ることに[l][r]
 帰り際，お土産屋さんを発見[l][r][cm]
-[bg storage=spots/kaikyokann/souve2.jpg time=500]
+[bg storage=spots/kaikyokann/souve3.jpg time=500]
 #heroine
 [chara_show name="heroine"]
 「あ，お土産屋さん」[l][r]
@@ -354,7 +359,8 @@ f.souve_flag = true
 [freeimage layer=1]
 [bg storage=spots/kaikyokann/sunset.jpg time=500]
 
-[jump target=*P6B_bad cond="f.flag || f.souve_flag==false"]
+[jump target=*P6A_good cond="f.flag && f.souve_flag"]
+[jump target=*P6B_bad cond="f.souve_flag==false"]
 [jump target=*P6B_normal]
 
 *P6A_good
@@ -372,22 +378,33 @@ f.souve_flag = true
 
 #hero
 「......................」[l][r]
-何だこの気持ちは.............[l][cm]
-胸が.....胸がドキドキしている.......!!!![l][cm]
+言葉にできない感情が押し寄せてくる[l][cm]
+「......................」[l][cm]
 
 #heroine
 [chara_show name="heroine"]
 「[emb exp="f.hero_name"]」[l][r]
 「............................」[l][cm]
 #heroine:shy
-「好きよ」[l][r]
+「好きよ」[l][cm]
+
+[chara_hide name=heroine time=1000]
+[freeimage layer="base"]
+
+#
+..................................[l][cm]
+今日のデートで二人の仲はより一層深まりました．[l][r]
+後日談ですが，二人は結婚し，幸せな家庭を築きました[l][cm]
+
 
 [chara_hide name=heroine time=300]
 [layopt layer="message0" visible="false"]
 
-[bg storage=spots/kaikyokann/sky2.jpg time=500]
-;[image layer=1 storage=spots/kaikyokann/bell.jpg visible=true top=50 left=280 width=600 height=600]
+[bg storage=spots/kaikyokann/sky2.jpg time=1000]
+[image layer=1 storage=spots/kaikyokann/iruka_azarashi.jpg visible=true top=50 left=350 width=600 height=600]
 [image layer=1 storage=spots/kaikyokann/congratulations.png visible=true top=530 left=350 width=600 height=230 ]
+[image layer=1 storage=spots/kaikyokann/clear.png visible=true top=20 left=350 width=600 height=200 ]
+
 [l]
 [jump target=*P7]
 
@@ -420,16 +437,27 @@ f.souve_flag = true
 
 #hero
 「......................？」[l][r]
-「そうなんだ！」[l][cm]
 ......思っていた展開と違う[l][cm]
 
 #heroine
-「........何突っ立ってんの」[l][r]
-「帰るわよ」[l][cm]
+「イルカショーのイルカたちはみんな仲良しでとても可愛かったわ.特に左の子が.......で..........だったの．
+カブトガニは........で.........の..........が魅力的なの．私は特に尻尾の.....が..........で.....好き．
+シロナガスクジラの......は..........で..............感動したわ．[l][cm]
+野生のスナメリは.........で.........なの．
+ペンギンゾーンには5種類のペンギンがいたわ．マカロニペンギンは..........で.........が特徴なの.
+それぞれのペンギンの特徴は........が...........で...........は..............................
+......が....................で.......................」[l][cm]
+
+#
+2時間後[l][cm]
+
+#heroine
+「それじゃ，帰るわよ」[l][cm]
+#
 
 [chara_hide name=heroine time=300]
 [layopt layer="message0" visible="false"]
-[bg storage=spots/kaikyokann/shiba.jpg time=500]
+[bg storage=spots/kaikyokann/shiba.jpg time=1000]
 [image layer=1 storage=spots/kaikyokann/cat.png visible=true top=20 left=300 width=779 height=685]
 [image layer=1 storage=spots/kaikyokann/normal_clear.png visible=true top=530 left=350 width=600 height=230 ]
 [l]
@@ -447,15 +475,15 @@ f.souve_flag = true
 
 #heroine
 「.......................」[l][r]
-「あなたに恋心はなくなりましたさようなら」[l][cm]
+「あなたに恋心はなくなりました」[l][cm]
 [chara_hide name=heroine time=300]
 
 #
 [emb exp="f.heroine_name"]は立ち去り,[emb exp="f.hero_name"]は一人になりました．[l][r]
-彼は日が沈むまで太陽を眺めた後，夜の闇の中に消えてゆきました．[l][cm]
+[emb exp="f.hero_name"]は日が沈むまで太陽を眺めた後，夜の闇の中に消えてゆきました．[l][cm]
 [layopt layer="message0" visible="false"]
 
-[bg storage=spots/kaikyokann/yami.jpg time=500]
+[bg storage=spots/kaikyokann/yami.jpg time=1000]
 [image layer=1 storage=spots/kaikyokann/game_over.png visible=true top=530 left=350 width=600 height=230 ]
 [l]
 [jump target=*P7]
