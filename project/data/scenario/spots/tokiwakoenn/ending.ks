@@ -1,3 +1,4 @@
+[stopbgm]
 [bg storage=spots/tokiwakoenn/black.png time=1500]
 
 [cm]
@@ -11,6 +12,7 @@
 @jump target=*end
 
 [elsif exp="tf.amulet == true && tf.feeling >= 20"]
+[playbgm storage=spots/tokiwakoenn/blessing.mp3]
 [eval exp="f.stamp_tokiwakoenn = true"]
 気分転換できた俺は，また頑張ろうと考え始め，研究や就職活動に取り組んだ．[l][r]
 その結果，働きたかった企業に入ることができ，現在もそこで熱心に働いている．[l][r]
@@ -56,4 +58,5 @@
 *end
 @layopt layer=message0 visible=false
 [wait time=2500]
+[stopbgm]
 @jump storage=simulator/map.ks target=*map

@@ -36,7 +36,6 @@
 [bg storage=spots/tokiwakoenn/around_shrine2.jpg time=800]
 [bg storage=spots/tokiwakoenn/around_shrine3.jpg time=800]
 [bg storage=spots/tokiwakoenn/around_shrine4.jpg time=800]
-[bg storage=spots/tokiwakoenn/around_shrine5.jpg time=800]
 [eval exp="tf.feeling += 5"]
 @jump target=*leave_shrine
 

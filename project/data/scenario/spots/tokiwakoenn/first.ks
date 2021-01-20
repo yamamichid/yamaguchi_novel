@@ -13,6 +13,8 @@ tf.amulet = false
 tf.lottery = false
 [endscript]
 
+[playbgm storage=spots/tokiwakoenn/basic_music.mp3]
+
 [wait time=200]
 [bg storage=spots/tokiwakoenn/enter.jpg]
 @layopt layer=message0 visible=true
