@@ -396,16 +396,21 @@ f.souve_flag = true
 今日のデートで二人の仲はより一層深まりました．[l][r]
 後日談ですが，二人は結婚し，幸せな家庭を築きました[l][cm]
 
-
+[eval exp="f.stamp_kaikyokann = true"]
 [chara_hide name=heroine time=300]
 [layopt layer="message0" visible="false"]
 
 [bg storage=spots/kaikyokann/sky2.jpg time=1000]
 [image layer=1 storage=spots/kaikyokann/iruka_azarashi.jpg visible=true top=50 left=350 width=600 height=600]
-[image layer=1 storage=spots/kaikyokann/congratulations.png visible=true top=530 left=350 width=600 height=230 ]
-[image layer=1 storage=spots/kaikyokann/clear.png visible=true top=20 left=350 width=600 height=200 ]
+[image layer=1 storage=spots/kaikyokann/congratulations.png visible=true top=530 left=350 width=600 height=230]
+[image layer=1 storage=spots/kaikyokann/clear.png visible=true top=0 left=350 width=600 height=200][l]
 
-[l]
+[layopt layer="message0" visible="true"]
+#
+..................................[l][r]
+海響館スタンプが追加されました[l][cm]
+[layopt layer="message0" visible="false"]
+
 [jump target=*P7]
 
 *P6B
