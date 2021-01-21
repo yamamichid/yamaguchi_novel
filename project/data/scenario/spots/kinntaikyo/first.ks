@@ -58,12 +58,12 @@
 *fight1_lose
 [cm]
 イワゴロンに攻撃！[r]
-[playse storage="spots/kinntaikyo/attack.ogg"]
+[playse storage="spots/kinntaikyo/attack.mp3"]
 イワゴロンに1のダメージ！[r]
 [p][cm]
 
 イワゴロンの攻撃！[r]
-[playse storage="spots/kinntaikyo/iwagoron_attack.ogg"]
+[playse storage="spots/kinntaikyo/iwagoron_attack.mp3"]
 [wait time=5000]
 100000000のダメージを受けた！[r]
 [p][cm]
@@ -118,7 +118,7 @@ f.eat="岩国レンコンチップス"
 *fight1_win
 [cm]
 イワゴロンに999のダメージ！[r][p]
-[playse storage="spots/kinntaikyo/attack.ogg"]
+[playse storage="spots/kinntaikyo/attack.mp3"]
 イワゴロンをたおした！[r]
 [chara_hide name=iwagoron]
 @jump target=*story2
@@ -213,12 +213,12 @@ f.eat="岩国レンコンチップス"
 *fight2_lose1
 [cm]
 コモラントデビルに攻撃！[r]
-[playse storage="spots/kinntaikyo/attack.ogg"]
+[playse storage="spots/kinntaikyo/attack.mp3"]
 コモラントデビルに1のダメージ！[r]
 [p][cm]
 
 コモラントデビルの攻撃！[r]
-[playse storage="spots/kinntaikyo/cormorantdevil_attack.ogg"]
+[playse storage="spots/kinntaikyo/cormorantdevil_attack.mp3"]
 [wait time=2000]
 [stopse ]
 99999のダメージを受けた！[r]
@@ -286,11 +286,11 @@ f.enemy1_eat = "ソフトクリーム"
 *fight2_lose2
 [cm]
 コモラントデビルに9のダメージ！[r]
-[playse storage="spots/kinntaikyo/attack.ogg"]
+[playse storage="spots/kinntaikyo/attack.mp3"]
 [p][cm]
 
 コモラントデビルの攻撃！[r]
-[playse storage="spots/kinntaikyo/cormorantdevil_attack.ogg"]
+[playse storage="spots/kinntaikyo/cormorantdevil_attack.mp3"]
 [wait time=2000]
 [stopse ]
 500のダメージ！[r]
