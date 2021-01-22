@@ -47,7 +47,7 @@
 *select_tired
 [eval exp="tf.feeling -= 5"]
 おばあさん「やっぱり、あなたを不幸にする悪い霊が憑いているわ。[l]このお守りに毎晩祈りなさい、そして肌身離さず持っていなさい。[l]そうすればあなたはシアワセになれるわ」[l][r]
-[eval exp="tf.amulet = true tf.feeling -= 5"]
+[eval exp="tf.amulet = true"]
 俺「ありがとうございます、毎晩お祈りしてみます！！！」[l][r][cm]
 [chara_hide name=obaa]
 @jump storage=spots/tokiwakoenn/ending.ks
