@@ -9,8 +9,8 @@
 
 [wait time=200]
 [position layer=message0 left="16" top="504" width="1248" height="200" frame="none" marginl="1" margint="1" marginr="1" marginb="1" ]
-[image layer="base" page="fore" storage="simulator/title_back.jpg" ]
-[image layer=1 storage="simulator/title_text.png" visible=true top=50 left=50]
+[image layer="base" page="fore" storage="simulator/title_back.png" ]
+
 [l]
 
 *map
