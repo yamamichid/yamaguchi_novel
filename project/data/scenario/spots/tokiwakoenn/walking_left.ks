@@ -1,7 +1,7 @@
 [bg storage=spots/tokiwakoenn/pelican.jpg]
 こっち側にはペリカンがいるんだな、写真でも撮ろう。[l][r][cm]
 
-[playse storage="spots/tokiwakoenn/camera.mp3"]
+;[playse storage="spots/tokiwakoenn/camera.mp3"]
 [wait time=800]
 [bg storage=spots/tokiwakoenn/pelican_road.jpg]
 [bg storage=spots/tokiwakoenn/leave_pelican2.jpg]
