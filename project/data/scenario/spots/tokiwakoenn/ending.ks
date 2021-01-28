@@ -26,6 +26,7 @@
 大切なことは勉強することでも就職することでもない、ただお祈りするだけだったのだ。[l][r]
 シアワセニナレマスヨウニシアワセニナレマスヨウニ...[l][r][cm]
 
+@layopt layer=message0 visible=false
 [bg storage=spots/tokiwakoenn/game_over.jpg time=1000]
 
 [elsif exp="tf.lottery == true"]
@@ -33,25 +34,30 @@
 あの神社のおかげだと思っている．[l][r]
 現在は働くことなく暮らしているが，社会で活躍している同級生の話を聞いて，俺の人生はこれで良かったのかと疑問に思うことがある．[l][r]
 ...[cm]
+@layopt layer=message0 visible=false
 [bg storage=spots/tokiwakoenn/game_over.jpg time=1000]
 
 [elsif exp="tf.feeling <= 15"]
 色々悩んでいたが，深く考えない生き方が良いのではないかと考えた．[l][r]
 現在はだらだらと過ごしている．[l][r]
 [cm]
+@layopt layer=message0 visible=false
 [bg storage=spots/tokiwakoenn/game_over.jpg time=1000]
 
 [elsif exp="tf.feeling <= 20"]
+@layopt layer=message0 visible=false
 それなりにリフレッシュできた俺はいつも通りに課題をこなし，就職活動も無難に終え，平凡な生活を送っている．[l][r]
 こんなものなのだろう[r]
 [cm]
-[bg storage=spots/tokiwakoenn/game_over.jpg time=1000]
+@layopt layer=message0 visible=false
+[bg storage=spots/tokiwakoenn/normal_end.png time=1000]
 
 [else]
 気分転換できた俺は就職活動に前向きに取り組み始めた．[l][r]
 現在は安定した生活を送っているが少し物足りなさも感じている[l][r]
 [cm]
-[bg storage=spots/tokiwakoenn/game_over.jpg time=1000]
+@layopt layer=message0 visible=false
+[bg storage=spots/tokiwakoenn/normal_end.png time=1000]
 [endif]
 
 
